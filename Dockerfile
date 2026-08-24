@@ -38,7 +38,7 @@ WORKDIR /app
 
 # 첫 번째 단계(builder)에서 생성된 JAR 파일을
 # 현재 실행용 이미지의 /app/app.jar로 복사
-COPY --from=builder /app/build/libs/*.jar app.jar
+COPY --from=builder /app/build/libs/blog-api-0.0.1-SNAPSHOT.jar app.jar
 
 # 컨테이너가 사용하는 포트가 8080임을 문서화
 EXPOSE 8080
