@@ -26,7 +26,7 @@ RUN chmod +x ./gradlew
 # Gradle을 이용해 애플리케이션 빌드
 # -x test → 테스트는 실행하지 않고 빌드
 # 결과물(.jar)은 /app/build/libs/ 아래에 생성됨
-RUN ./gradlew build -x test
+RUN ./gradlew build -x test --no-daemon
 
 
 # 실제 애플리케이션 실행용 이미지
