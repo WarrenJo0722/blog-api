@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: blog-api
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/blogdb}
+    username: ${SPRING_DATASOURCE_USERNAME:bloguser}
+    password: ${SPRING_DATASOURCE_PASSWORD:blogpass}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    show-sql: ${SPRING_JPA_SHOW_SQL:true}
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL_ROOT:INFO}
+    org.hibernate.SQL: ${LOGGING_LEVEL_SQL:DEBUG}
+
+server:
+  port: 8080
